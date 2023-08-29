@@ -48,7 +48,7 @@
         a utl_submit_wps64x         Allows three level quotes (backtick changes to single quote just before execution)
         b utl_submit_wps64x         Proc R
         c utl_submit_wps64x         Proc Python
-        d untl_pybeginx
+        d untl_pybeginx             Parmcards4. Code appears as it would in Python
 
       2 R Without WPS
 
@@ -63,14 +63,14 @@
                                     Input/Output macro variable
       4 PERL
 
-         a utl_submit_pl64          Input macro variable but not output. Two levels of quotes. End lines with ;`
+         a utl_submit_pl64          Input/Output macro variable. Two levels of quotes. End lines with ;`
                                     Semicolon backtick. Feel free to create beginx and endx macros.
 
       5 POWERSHELL
 
-         autl_submit_ps64           Input macro variable but not output. Two levels of quotes
-
-      6 Microsoft R                 Optimized for parallel processing
+         autl_submit_ps64           Input/Output macro variables 
+         
+      6 Microsoft R                 Optimized for parallel processing. Input/Output macro variables.
 
 
     %let strInp=Geeksforgeeks;
