@@ -1,5 +1,3 @@
-# utl-examples-of-drop-downs-from-sas-to-wps-r-microsoftR-python-perl-powershell
-Examples of drop downs from sas to wps r microsoftR python perl powershell
     %let pgm=utl-examples-of-drop-downs-from-sas-to-wps-r-microsoftR-python-perl-powershell;
 
     Examples of drop downs from sas to wps r microsoftR python perl powershell;
@@ -26,28 +24,28 @@ Examples of drop downs from sas to wps r microsoftR python perl powershell
 
       SOLUTIONS
 
-      Drop down macros available on end of this post. You may need to do minor edits on the macros.
-      My github is not production code so feel free to cleanup or enhance the code. Any questions will be promptly answered.
+      Drop down macros available on the end of this post. You may need to do minor edits on the macros.
+      My github is not production code so feel free to clean up or enhance the code. Any questions will be promptly answered.
 
-      Notes about the drop downs
+      Notes about the drop-downs
 
-        1. Only double quotes are used in all the drop down macros.
+        1. Only double quotes are used in all the drop-down macros.
         2. utl_submit_r64x, utl_submit_wps64x and utl_submit_py64x allow three levels of quotes.
-           Backtick is converted to single quote just before executon.
+           Backtick is converted to a single quote just before execution.
            if index(cmd,"`") then cmd=tranwrd(cmd,"`","27"x);
-        3. The clipboard is used to move r, python, perl .. character data into parent macro varables.
-        4. There are many other ways to pass data,files, storage adresses, imbedded code and data, Wps/SAS SASxports...
+        3. The clipboard is used to move r, python, perl .. character data into parent macro variables.
+        4. There are many other ways to pass data, files, storage addresses, imbedded code and data, Wps/SAS SASxports...
         5. Depending on how you use the single quote you may need to set resolve=Y, especially in the beginx/endx macros.
         6. It is very easy to add drop downs for other languges.
         7. The beginx/endx macros use parmcards4 so the code is exactly as it would appear in the target language,
-           no need to relyt on a delimiter for separating lines.
+           no need to rely on a delimiter for separating lines.
         8. Deleting the sasmacr1-4 is probably not needed. But they contain compiled macros and I am
-           not sure under which circumtances which macro is executed. Seems to work better deleteing them?
+           not sure under which circumstances which macro is executed. Seems to work better deleting them?
 
 
       1 WPS (none of these work in the community version of wps)
 
-        a utl_submit_wps64x         Allows three level quotes (backtic changes to single quote just before execution)
+        a utl_submit_wps64x         Allows three level quotes (backtick changes to single quote just before execution)
         b utl_submit_wps64x         Proc R
         c utl_submit_wps64x         Proc Python
         d untl_pybeginx
@@ -60,7 +58,7 @@ Examples of drop downs from sas to wps r microsoftR python perl powershell
 
       3 PYTHON Without WPS
 
-        a utl_submit_py64_310x      Three levels of quotes, single, double and backtick. Input/Output macro variable.
+        a utl_submit_py64_310x      Three levels of quotes, single, double, and backtick. Input/Output macro variable.
         b utl_pybeginx/utl_pyendx   Functional semicolon. Do not have to end lines with semicolon.
                                     Input/Output macro variable
       4 PERL
@@ -72,7 +70,7 @@ Examples of drop downs from sas to wps r microsoftR python perl powershell
 
          autl_submit_ps64           Input macro variable but not output. Two levels of quotes
 
-      6 Microsoft R                 Optimized for parrallel processing
+      6 Microsoft R                 Optimized for parallel processing
 
 
     %let strInp=Geeksforgeeks;
@@ -998,3 +996,4 @@ Examples of drop downs from sas to wps r microsoftR python perl powershell
      \___|_| |_|\__,_|
 
     */
+
